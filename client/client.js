@@ -1,6 +1,6 @@
 const PROTO_PATH="../restaurant.proto";
 
-const grpc = require("grpc");
+const grpc = require("@grpc/grpc-js");
 const protoLoader = require("@grpc/proto-loader");
 
 var packageDefinition = protoLoader.loadSync(PROTO_PATH,{

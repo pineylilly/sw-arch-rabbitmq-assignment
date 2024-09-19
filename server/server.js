@@ -1,6 +1,6 @@
 const PROTO_PATH="./restaurant.proto";
 
-var grpc = require("grpc");
+var grpc = require("@grpc/grpc-js");
 var protoLoader = require("@grpc/proto-loader");
 
 var packageDefinition = protoLoader.loadSync(PROTO_PATH,{
@@ -115,6 +115,8 @@ server.addService(restaurantProto.RestaurantService.service,{
     }
 });
 
-server.bind("127.0.0.1:30043",grpc.ServerCredentials.createInsecure());
-console.log("Server running at http://127.0.0.1:30043");
-server.start();
+server.bindAsync("127.0.0.1:30043",grpc.ServerCredentials.createInsecure(), () => {
+    console.log("Server running at http://127.0.0.1:30043");
+    // server.start();
+});
+
