@@ -19,47 +19,56 @@ const menu=[
     {
         id: "a68b823c-7ca6-44bc-b721-fb4d5312cafc",
         name: "Tomyam Gung",
-        price: 500
+        price: 500,
+        type: "thai"
     },
     {
         id: "34415c7c-f82d-4e44-88ca-ae2a1aaa92b7",
         name: "Somtam",
-        price: 60
+        price: 60,
+        type: "thai"
     },
     {
         id: "8551887c-f82d-4e44-88ca-ae2a1ccc92b7",
         name: "Pad-Thai",
-        price: 120
+        price: 120,
+        type: "thai"
     },
     {
         id: "18b8f73d-9e8d-400a-91cd-98975e626bca",
         name: "Kai-Jiew",
-        price: 30
+        price: 30,
+        type: "thai"
     },
     {
         id: "29103e35-c0f3-4aec-9ebb-d6d9a7ebdc31",
         name: "Kraprao",
-        price: 50
+        price: 50,
+        type: "thai"
     },
     {
         id: "12f7673e-3259-4dde-9e8b-c781e6cc225c",
         name: "Fried rice",
-        price: 60
+        price: 60,
+        type: "thai"
     },
     {
         id: "14f8c56e-69cf-4744-bec6-337db17c8a87",
         name: "Sukiyaki",
-        price: 70
+        price: 70,
+        type: "japanese"
     },
     {
         id: "77a21a95-819d-48c3-aeb0-1b75056a44e5",
         name: "Fried egg",
-        price: 10
+        price: 10,
+        type: "food"
     },
     {
         id: "8c7b5ba8-0152-4b48-a47f-e90253dcb69f",
         name: "Fried chicken",
-        price: 30
+        price: 30,
+        type: "food"
     }
 ];
 

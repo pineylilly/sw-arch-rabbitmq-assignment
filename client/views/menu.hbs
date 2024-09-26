@@ -40,7 +40,7 @@
                     <td>{{ price }} THB</td>
                     <td>
                         <a href="javascript:void(0);" class="btn btn-sm edit restaurant" data-id="{{ id }}"
-                            data-name="{{ name }}" data-price=1>Order</a>
+                            data-name="{{ name }}" data-type="{{ type }}" data-price=1>Order</a>
                     </td>
                 </tr>
                 {{else}}
@@ -76,6 +76,7 @@
                     </div>
                     <div class="modal-footer">
                         <input type="hidden" name="id" class="menu_id">
+                        <input type="hidden" name="type" class="menu_type">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                         <button type="submit" class="btn logrocket">Place order</button>
                     </div>
@@ -98,6 +99,7 @@
                 $('.menu_id').val($(this).data('id'));
                 $('.name').val($(this).data('name'));
                 $('.price').val($(this).data('price'));
+                $('.menu_type').val($(this).data('type'));
                 $('.address').val($(this).data('address'));
             }).on('click', '.remove', function () {
                 $('#removeMenuModal').modal('show');
