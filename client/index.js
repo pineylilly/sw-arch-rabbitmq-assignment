@@ -44,12 +44,12 @@ app.post("/placeorder", (req, res) => {
             }
 
             var exchange = 'orders'
-            var queue = 'order_queue';
+            // var queue = 'order_queue';
             //var msg = process.argv.slice(2).join(' ') || "Hello World!";
 
-            channel.assertQueue(queue, {
-                durable: true
-            });
+            // channel.assertQueue(queue, {
+            //     durable: true
+            // });
 
             channel.assertExchange(exchange, 'topic', {
                 durable: false
@@ -67,8 +67,7 @@ app.post("/placeorder", (req, res) => {
         });
     });
     
-
-    res.send("Order placed successfully");
+    res.redirect("/")
     //console.log("update Item %s %s %d",updateMenuItem.id, req.body.name, req.body.quantity);
 });
 
