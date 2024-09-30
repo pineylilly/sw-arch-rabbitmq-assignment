@@ -39,7 +39,7 @@ amqp.connect('amqp://localhost', function(error0, connection) {
       console.log(" [*] Waiting for messages for topic %s. To exit press CTRL+C", topic);
 
       channel.consume(q.queue, function(msg) {
-        var secs = msg.content.toString().split('.').length - 1;
+        var secs = JSON.parse(msg.content).quantity
         // console.log(msg.content.toString())
         console.log(" [x] Received");
         console.log(JSON.parse(msg.content));
